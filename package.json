@@ -1,0 +1,115 @@
+{
+  "name": "react-native-nazar",
+  "version": "1.0.0",
+  "description": "Device performance monitoring, profiling, benchmarking, and adaptive quality library for React Native",
+  "main": "src/index.ts",
+  "module": "src/index.ts",
+  "types": "src/index.ts",
+  "react-native": "src/index.ts",
+  "source": "src/index.ts",
+  "exports": {
+    ".": {
+      "react-native": "./src/index.ts",
+      "import": "./src/index.ts",
+      "require": "./src/index.ts",
+      "default": "./src/index.ts"
+    },
+    "./profiler": {
+      "react-native": "./src/profiler/index.ts",
+      "import": "./src/profiler/index.ts",
+      "require": "./src/profiler/index.ts",
+      "default": "./src/profiler/index.ts"
+    }
+  },
+  "files": [
+    "src",
+    "lib",
+    "android",
+    "ios",
+    "*.podspec",
+    "!ios/build",
+    "!android/build",
+    "!android/gradle",
+    "!android/gradlew",
+    "!android/gradlew.bat",
+    "!android/local.properties",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__",
+    "!**/.*"
+  ],
+  "scripts": {
+    "example": "yarn workspace react-native-nazar-example",
+    "test": "jest",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "clean": "del-cli android/build lib",
+    "build": "bob build",
+    "release": "release-it"
+  },
+  "keywords": [
+    "react-native",
+    "ios",
+    "android",
+    "performance",
+    "benchmark",
+    "device",
+    "cpu",
+    "memory",
+    "battery",
+    "gpu",
+    "specs",
+    "hardware",
+    "metrics",
+    "optimization",
+    "adaptive",
+    "profiler",
+    "nazar",
+    "monitoring"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prakharcodehere/react-native-nazar.git"
+  },
+  "author": "prakharcodehere",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/prakharcodehere/react-native-nazar/issues"
+  },
+  "homepage": "https://github.com/prakharcodehere/react-native-nazar#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "devDependencies": {
+    "@react-native/eslint-config": "^0.73.1",
+    "@types/react": "^18.2.44",
+    "del-cli": "^5.1.0",
+    "eslint": "^8.51.0",
+    "prettier": "^3.0.3",
+    "react": "18.2.0",
+    "react-native": "0.73.0",
+    "react-native-builder-bob": "^0.23.2",
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "engines": {
+    "node": ">= 18.0.0"
+  },
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      [
+        "typescript",
+        {
+          "project": "tsconfig.build.json"
+        }
+      ]
+    ]
+  }
+}
