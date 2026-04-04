@@ -1,0 +1,11 @@
+example/
+.github/
+__tests__/
+__fixtures__/
+__mocks__/
+.vscode/
+.idea/
+*.zip
+IMPLEMENTATION_GUIDE.md
+APP_INTEGRATION_GUIDE.md
+redketchup.zip
